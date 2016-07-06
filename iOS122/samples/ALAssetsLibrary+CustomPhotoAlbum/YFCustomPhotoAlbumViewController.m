@@ -18,7 +18,7 @@
 
     SDWebImageManager * manager = [SDWebImageManager sharedManager];
     
-    NSURL * url = [NSURL URLWithString: @"http://yun.iOS122.shufawu.com/hd_data/201587/105111/o_19s31334ve4m138a1b2b1c86aj7g"];
+    NSURL * url = [NSURL URLWithString: @"https://o05kg8tfy.qnssl.com/wp-content/uploads/2016/06/54fbb2fb43166.jpg?imageView2/1/w/755/h/400"];
     [manager downloadImageWithURL: url options: 0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         NSLog(@"%g", receivedSize * 1.0 / expectedSize);
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
@@ -34,7 +34,7 @@
         [manager.imageCache removeImageForKey:key fromDisk: NO withCompletion:^{
             ALAssetsLibrary * library = [[ALAssetsLibrary alloc] init];
             
-            [library saveImage:image toAlbum:@"iOS122" withCompletionBlock:^(NSURL *assetUrl, NSError *error) {
+            [library saveImage:image toAlbum:@"iOS1" withCompletionBlock:^(NSURL *assetUrl, NSError *error) {
                 NSLog(@"%@ %@", assetUrl, error);
             }];
         }];
